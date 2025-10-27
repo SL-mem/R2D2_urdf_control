@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <include file="$(find r2d2_description)/launch/spawn_r2d2.launch"/>
+    <include file="$(find r2d2_description)/launch/r2d2_control.launch"/>
+</launch>

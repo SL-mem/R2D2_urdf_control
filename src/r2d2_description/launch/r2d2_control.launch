@@ -1,0 +1,16 @@
+<launch>
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find r2d2_description)/config/r2d2.yaml" command="load"/>
+
+  <!-- load the controllers -->
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/r2d2" args="joint_state_controller roll_joint_velocity_controller wheel_arm1_joint_velocity_controller wheel_arm2_joint_velocity_controller incline_joint_position_controller base_cylinder_joint_position_controller base_head_joint_position_controller shoulder1_joint_position_controller coude1_joint_position_controller shoulder2_joint_position_controller coude2_joint_position_controller --shutdown-timeout 3"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/r2d2/joint_states" />
+  </node>
+
+</launch>
