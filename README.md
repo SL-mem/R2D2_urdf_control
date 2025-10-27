@@ -4,6 +4,6 @@ Creating and assembling all the parts of the R2D2 robot in URDF. Controlling eac
 ![til](media/All_movements_blue.gif)
 
 
-![til](media/camera.gif)
+![til](media/Camera.gif)
 
 ![til](media/All_movements_red.gif)
