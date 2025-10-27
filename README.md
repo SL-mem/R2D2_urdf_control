@@ -2,3 +2,8 @@
 Creating and assembling all the parts of the R2D2 robot in URDF. Controlling each joint and simulating a movement in Gazebo and Rviz.
 
 ![til](media/All_movements_blue.gif)
+
+
+![til](media/camera.gif)
+
+![til](media/All_movements_red.gif)
